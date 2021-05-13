@@ -6,4 +6,4 @@ for ec2 in $(aws ec2 describe-instances | grep InstanceId | awk '{print $2}' | s
 do
 aws ec2 stop-instances --instance-ids $ec2
 done
-#exit 0
+exit 0
